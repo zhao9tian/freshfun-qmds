@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html id="html">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta name="format-detection" content="telephone=no">
+        <title>添加新的提现渠道</title>
+        <link rel="stylesheet" href="css/frozen.css">
+        <link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/addWithdraw.css"/>
+        <script src="js/jquery-1.11.0.min.js"></script>
+        <script src="js/zepto.min.js"></script>
+        <script src="js/frozen.js"></script>
+    </head>
+    <body ontouchstart>
+        <!--<header>
+        	<!--<div class="left-arrow" onclick="javascript:history.back(-1);">
+				<svg viewBox="29 63 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">-->
+				    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+				    <!--<desc>Created with Sketch.</desc>
+				    <defs></defs>
+				    <g id="Rectangle-261-+-Rectangle-261-Copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(50.353553, 83.646447) rotate(-135.000000) translate(-50.353553, -83.646447) translate(35.853553, 69.146447)">
+				        <rect id="Rectangle-261" fill="#333333" x="0.3125" y="0.4375" width="28" height="3" rx="1.5"></rect>
+				        <rect id="Rectangle-261-Copy" fill="#333333" transform="translate(26.843750, 14.437500) rotate(-270.000000) translate(-26.843750, -14.437500) " x="12.84375" y="12.9375" width="28" height="3" rx="1.5"></rect>
+				    </g>
+				</svg>
+        	</div>-->
+        	<!--<span>添加新的提现渠道</span>
+        </header>-->
+        <div class="withdraw-method">
+            <span>选择渠道方式</span>
+        </div>
+        <section class="add-withdraw">
+            <div class="block-wechat isChecked">
+                <span>微信账号</span>
+                <div class="check">
+                    <div class="input input-false input-true" id="wechatBtn"></div>
+                </div>
+            </div>
+            <div class="block-pay isChecked">
+                <span>支付宝账号</span>
+                <div class="check">
+                    <div class="input input-false" id="payBtn"></div>
+                </div>
+            </div>
+            <div class="block-card isChecked">
+                <span>银行卡号</span>
+                <div class="check">
+                    <div class="input input-false" id="cardBtn"></div>
+                </div>
+            </div>
+        </section>
+        <section class="info">
+            <span class="info-name"></span>
+            <input type="text" placeholder="请输入您的提现账号" id="infoNum">
+        </section>
+        <section class="confirm"><span>确定</span></section>
+        <script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type='text/javascript' src='js/rem.js' charset='utf-8'></script>
+		<script src="js/addWithdraw.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+	        $('.ui-list li,.ui-tiled li').click(function(){
+	            if($(this).data('href')){
+	                location.href= $(this).data('href');
+	            }
+	        });
+        </script>  
+    </body>
+</html>

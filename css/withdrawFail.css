@@ -1,0 +1,106 @@
+body {
+  background: #ebebeb; }
+
+header {
+  display: block;
+  width: 100%;
+  height: .9rem;
+  line-height: .9rem;
+  text-align: center;
+  background: #fff;
+  z-index: 1000;
+  border-bottom: 1px solid #eee; }
+  header .left-arrow svg {
+    position: absolute;
+    left: .29rem;
+    top: .23rem;
+    width: .42rem;
+    height: .42rem; }
+  header span {
+    font-size: .36rem;
+    color: #333; }
+  header #submit {
+    position: absolute;
+    right: .3rem;
+    font-size: .36rem;
+    color: #333; }
+
+.icon {
+  display: block;
+  margin: 0 auto;
+  padding: .85rem 0 0 0;
+  text-align: center;
+  background: #fff; }
+  .icon img {
+    width: .8rem;
+    height: .8rem; }
+
+.text {
+  display: block;
+  padding-bottom: .6rem;
+  padding: 0;
+  text-align: center;
+  background: #fff; }
+  .text span {
+    display: block;
+    font-size: .32rem;
+    color: #333; }
+    .text span:nth-child(2) {
+      display: inline-block;
+      margin-top: .2rem;
+      width: 4.35rem;
+      font-size: .28rem;
+      color: #999; }
+
+.line {
+  padding-bottom: .6rem;
+  width: 100%;
+  height: .01rem;
+  background: #fff;
+  border-bottom: 1px solid #b9b9b9; }
+
+.reason {
+  display: block;
+  margin: 0 auto .2rem auto;
+  padding: .6rem 0 0 0;
+  width: 100%;
+  height: 2.3rem;
+  text-indent: 1.3rem;
+  text-align: left;
+  background: #fff; }
+  .reason span {
+    display: block;
+    width: 100%;
+    font-size: .26rem;
+    color: #999; }
+    .reason span:nth-child(1) {
+      color: #333; }
+
+.contact {
+  display: block;
+  padding-top: .6rem;
+  padding-left: 1rem;
+  padding-right: 1.2rem;
+  height: 5.1rem;
+  background: #fff; }
+  .contact .call {
+    font-size: .26rem;
+    color: #333; }
+  .contact .phone {
+    display: block;
+    margin-top: .3rem;
+    margin-bottom: .3rem;
+    width: 5.2rem;
+    height: .9rem;
+    line-height: .9rem;
+    text-align: center;
+    border: 1px solid #333; }
+    .contact .phone span {
+      font-size: .36rem;
+      color: #333; }
+  .contact .good, .contact .money {
+    display: block;
+    font-size: .26rem;
+    color: #999; }
+
+/*# sourceMappingURL=withdrawFail.css.map */

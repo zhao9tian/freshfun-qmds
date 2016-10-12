@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html id="html">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta name="format-detection" content="telephone=no">
+        <title>我的收益</title>
+        <link rel="stylesheet" href="css/frozen.css">
+        <link rel="stylesheet" type="text/css" href="css/myIncome.css"/>
+        
+    </head>
+    <body>
+    	
+    	<section>
+    		<div class="pointBlock" style="display: none;">
+    			<h2>提醒</h2>
+    			<p>未入账收益是指：您已经发货但是买家还未确认收货的订单将会产生的收益。</p>
+    		</div>
+    		<h4>我的总收益</h4>
+    		<div class="totalIncome"></div>
+    		<div class="disIncome">
+    			<span>未入账收益：<i class="unrecorded"></i>元<b class="point"><img src="img/point.png"/></b></span>
+    		</div>
+    	</section>
+        <div class="ellipse">
+        	<img src="img/ellipse.png"/>
+        </div> 
+        <button class="btn">我要提现</button>
+        <footer>
+        	<li class="index"></li>
+        	<li class="myIncome myIncomeActive"></li>
+        	<li class="myBrand"></li>
+        </footer>
+        <script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type='text/javascript' src='js/rem.js' charset='utf-8'></script>
+		<script src="js/myIncome.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+        	$(".index").click(function(){
+        		window.location.href = "index.html";
+        	})
+        	$(".myIncome").click(function(){
+        		window.location.href = "myIncome.html";
+        	})
+        	$(".myBrand").click(function(){
+        		window.location.href = "myBrand.html";
+        	})
+        </script>
+    </body>
+</html>

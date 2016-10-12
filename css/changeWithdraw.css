@@ -1,0 +1,62 @@
+body {
+  background: #efefef; }
+
+header {
+  display: block;
+  width: 100%;
+  height: .9rem;
+  line-height: .9rem;
+  text-align: center;
+  background: #fff;
+  z-index: 1000;
+  border-bottom: 1px solid #eee; }
+  header .left-arrow svg {
+    position: absolute;
+    left: .29rem;
+    top: .23rem;
+    width: .42rem;
+    height: .42rem; }
+  header span {
+    font-size: .36rem;
+    color: #333; }
+
+.fill {
+  display: block;
+  width: 92%;
+  padding-left: .3rem;
+  padding-right: .3rem;
+  background: #fff; }
+  .fill .block {
+    display: block;
+    height: 1rem;
+    line-height: 1rem;
+    border-bottom: 1px solid #eee;
+    background: left no-repeat;
+    background-size: .4rem .4rem;
+    border-bottom: 1px solid #eee; }
+    .fill .block span {
+      margin-left: .6rem;
+      font-size: .28rem;
+      color: #333; }
+
+.add-withdraw {
+  display: block;
+  width: 92%;
+  padding-left: .3rem;
+  padding-right: .3rem;
+  height: 1rem;
+  line-height: 1rem;
+  background: #fff; }
+  .add-withdraw .add {
+    float: left; }
+    .add-withdraw .add svg {
+      position: relative;
+      width: .4rem;
+      height: .4rem;
+      top: .1rem; }
+  .add-withdraw span {
+    margin-left: .2rem;
+    font-size: .28rem;
+    color: #333; }
+
+/*# sourceMappingURL=changeWithdraw.css.map */

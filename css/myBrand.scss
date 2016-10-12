@@ -1,0 +1,194 @@
+
+.ellipse{
+    width:1.09rem;
+    height:.33rem;
+    position: fixed;
+    left:3.2rem ;
+    bottom:.9rem;    
+    z-index: 2;
+    img{
+        width:1.09rem;
+        height:.33rem;
+    }
+}
+footer{
+    width:100%;
+    height:.9rem;
+    position: fixed;
+    bottom: 0;
+    li{
+        width:33.33%;
+        height:.9rem;
+        float: left;
+    }
+    .index{
+        background:#fff url(../img/unchecked.png) 1.05rem bottom no-repeat;
+        background-size:5.6rem 1.25rem;
+    }
+    .myIncome{
+        background:#fff url(../img/unchecked.png) -1.46rem bottom no-repeat;
+        background-size:5.6rem 1.25rem;
+    }
+    .myBrand{
+        background:#fff url(../img/unchecked.png) -4rem bottom no-repeat;
+        background-size:5.6rem 1.25rem;
+    }
+    .indexActive{
+        background:#fff url(../img/checked.png) 1.05rem bottom no-repeat;
+        background-size:5.6rem 1.25rem;
+    }
+    .myIncomeActive{
+        background:#fff url(../img/checked.png) -1.46rem bottom no-repeat;
+        background-size:5.6rem 1.25rem;
+    }
+    .myBrandActive{
+        background:#fff url(../img/checked.png) -4rem bottom no-repeat;
+        background-size:5.6rem 1.25rem;
+    }
+}
+.QRC{
+    width:5.6rem;
+    height:10rem;
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+    background: #fff;
+    border-radius: .05rem;
+    .logo{
+        width:.7rem;
+        height:.88rem;
+        position: absolute;
+        left:.27rem;
+        top:.25rem;
+        background:url(../img/QRC-logo.png) no-repeat;
+        background-size: .7rem .88rem ;
+    }
+    .del{
+        width:.92rem;
+        height:.7rem;
+        position: absolute;
+        right:0;
+        top:.25rem;
+        background:url(../img/QRC-del.png) no-repeat;
+        background-size: .92rem .7rem ;
+    }
+    .img{
+        width:100%;
+        height:5.6rem;
+        overflow: hidden;
+        img{
+            width:100%;
+            height:5.6rem;
+        }
+    }
+    .con{
+        width:100%;
+        height:4.4rem;
+        box-sizing: border-box;
+        padding:.28rem .6rem 0 .6rem;
+        h4{
+            height:.46rem;
+            font-size:.28rem;
+            text-align: center;
+        }
+        h5{
+            height:.72rem;
+            font-size:.20rem;
+            text-align: center;
+        }
+        .pri{
+            height:.67rem;
+            background: url(../img/buy.png) 1.16rem .04rem no-repeat;
+            background-size:1.02rem .36rem ;
+            span{
+                margin-left: 2.18rem;
+                font-size:.28rem;
+                color: red;
+            }
+        }
+        .QRC-img{
+            height:1.76rem;
+            padding-left:1.38rem;
+            canvas{
+                width:1.56rem;
+                height:1.5rem;
+            }
+            img{
+                width:1.56rem;
+                height:1.5rem;
+            }
+        }
+        .des{
+            text-align: center;
+            font-size:.2rem;
+            color: #797979;
+        }
+    }
+}
+section{
+    width:100%;
+    background: #efefef;
+    padding-bottom:.9rem;
+    .kong{
+        width:100%;
+        box-sizing: border-box;
+        padding-top:3.24rem;
+        background: #ebebeb url(../img/kong.png) center 1.56rem no-repeat;
+        background-size: 1.60rem 1.34rem;
+        h4{
+            width:100%;
+            height:1.88rem;
+            font-size: .32rem;
+            text-align: center;
+        }
+        button{
+            width:3.36rem;
+            height:.94rem;
+            border-radius: .05rem;
+            margin-left:2.06rem;
+            background: #ff3b31;
+            color: #fff;
+        }
+    }
+    dl{
+        width:100%;
+        height:3.34rem;
+        box-sizing: border-box;
+        border:1px solid #d7d7d7;
+        padding-top:.63rem;
+        padding-left:.51rem;
+        margin-top:.4rem;
+        background: #fff;
+        dt{
+            width:2.06rem;
+            height:2.06rem;
+            float: left;
+            img{
+                width:2.06rem;
+                height:2.06rem;
+            }
+        }
+        dd{
+            width:4.48rem;
+            height:2.06rem;
+            float: right;
+            h4{
+                height:1.03rem;
+                font-size:.3rem;
+            }
+            div{
+                width:1.4rem;
+                height:.56rem;
+                box-sizing: border-box;
+                border:1px solid #333;
+                font-size:.24rem;
+                text-align: center;
+                line-height: .56rem;
+                border-radius: .05rem;
+            }
+        }
+    }
+}

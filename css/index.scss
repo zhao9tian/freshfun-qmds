@@ -1,0 +1,162 @@
+//header{
+//  display: block;
+//  position: fixed;
+//  top: 0;
+//  width: 100%;
+//  height: .9rem;
+//  line-height: .9rem;
+//  text-align: center;
+//  border-bottom: 1px solid #eee;
+//  background: #fff;
+//  z-index: 1000;
+//  .left-arrow{
+//      svg{
+//          position: absolute;
+//          left: .29rem;
+//          top: .23rem;
+//          width: .42rem;
+//          height: .42rem;
+//      }
+//  }
+//  span{
+//      font-size: .36rem;
+//      color: #333;
+//  }
+//}
+.ellipse{
+    width:1.09rem;
+    height:.33rem;
+    position: fixed;
+    left:3.2rem ;
+    bottom:.9rem;    
+    z-index: 2;
+    img{
+        width:1.09rem;
+        height:.33rem;
+    }
+}
+
+footer{
+    width:100%;
+    height:.9rem;
+    position: fixed;
+    bottom: 0;
+    li{
+        width:33.33%;
+        height:.9rem;
+        float: left;
+    }
+    .index{
+        background:#fff url(../img/unchecked.png) 1.05rem bottom no-repeat;
+        background-size:5.6rem 1.25rem;
+    }
+    .myIncome{
+        background:#fff url(../img/unchecked.png) -1.46rem bottom no-repeat;
+        background-size:5.6rem 1.25rem;
+    }
+    .myBrand{
+        background:#fff url(../img/unchecked.png) -4rem bottom no-repeat;
+        background-size:5.6rem 1.25rem;
+    }
+    .indexActive{
+        background:#fff url(../img/checked.png) 1.05rem bottom no-repeat;
+        background-size:5.6rem 1.25rem;
+    }
+    .myIncomeActive{
+        background:#fff url(../img/checked.png) -1.46rem bottom no-repeat;
+        background-size:5.6rem 1.25rem;
+    }
+    .myBrandActive{
+        background:#fff url(../img/checked.png) -4rem bottom no-repeat;
+        background-size:5.6rem 1.25rem;
+    }
+}
+section{
+    width:100%;
+    padding-top:.3rem;
+    padding-left:.2rem;
+    padding-right:.2rem;
+    box-sizing: border-box;
+    background: #ebebeb;
+    padding-bottom:.9rem;
+    dl:nth-child(odd){
+        float: left;
+    }
+    dl:nth-child(even){
+        float: right;   
+    }
+    dl{
+        width:3.5rem;
+//      height:3.8rem;
+        position: relative;
+        background: #fff;
+        box-sizing: border-box;
+        border-bottom:.3rem solid #ebebeb;
+        dt{
+            width:3.5rem;
+            height:3.5rem;
+            img{
+                width:100%;
+                height:100%;
+            }
+        }
+        dd{
+            width:3.5rem;
+            height:.84rem;
+            h4{
+                width:2rem;
+                height:.42rem;
+                line-height: .6rem;
+                font-size:.22rem;
+                text-indent: .16rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            div{
+                height:.42rem;
+                text-indent: .16rem;
+                span{
+                    display: block;
+                    float: left;
+                }
+                span:nth-child(1){
+                    color:red;
+                    font-size:.22rem;
+                }
+                span:nth-child(2){
+                    color:#999;
+                    font-size:.18rem;
+                    line-height: .36rem;
+                }
+            }
+        }
+        .agentState{
+            width:.86rem;
+            height:.86rem;
+            border:.03rem solid #fff;
+            position: absolute;
+            right:.26rem;
+            bottom:.5rem;
+            background: red;
+            span{
+                width:100%;
+                display: block;
+                color: #fff;
+                text-align: center;
+            }
+            span:nth-child(1){
+                height:.5rem;
+                font-size:.2rem;
+                line-height: .7rem;
+            }
+            span:nth-child(2){
+                height:.36rem;
+                font-size:.16rem; 
+            }
+        }
+    } 
+    .clearfloat{
+        clear: both;
+    }
+}

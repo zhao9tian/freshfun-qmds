@@ -1,0 +1,93 @@
+/* line 1, withdrawSuccess.scss */
+body {
+  background: #fff;
+}
+
+/* line 2, withdrawSuccess.scss */
+header {
+  display: block;
+  width: 100%;
+  height: .9rem;
+  line-height: .9rem;
+  text-align: center;
+  background: #fff;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+/* line 12, withdrawSuccess.scss */
+header .left-arrow svg {
+  position: absolute;
+  left: .29rem;
+  top: .23rem;
+  width: .42rem;
+  height: .42rem;
+}
+/* line 20, withdrawSuccess.scss */
+header span {
+  font-size: .36rem;
+  color: #333;
+}
+/* line 24, withdrawSuccess.scss */
+header #submit {
+  position: absolute;
+  right: .3rem;
+  font-size: .36rem;
+  color: #333;
+}
+
+/* line 31, withdrawSuccess.scss */
+.icon {
+  display: block;
+  margin: .8rem auto 0 auto;
+  padding: 0;
+  text-align: center;
+}
+/* line 36, withdrawSuccess.scss */
+.icon svg {
+  width: .8rem;
+  height: .8rem;
+}
+
+/* line 41, withdrawSuccess.scss */
+.text {
+  display: block;
+  padding: 0;
+  text-align: center;
+}
+/* line 45, withdrawSuccess.scss */
+.text span {
+  display: block;
+  font-size: .32rem;
+  color: #333;
+}
+/* line 49, withdrawSuccess.scss */
+.text span:nth-child(2) {
+  display: inline-block;
+  margin-top: .6rem;
+  width: 4.35rem;
+  font-size: .28rem;
+  color: #999;
+}
+/* line 57, withdrawSuccess.scss */
+.text .good, .text .money {
+  display: block;
+  font-size: .26rem;
+  color: #999;
+}
+
+/* line 66, withdrawSuccess.scss */
+.button {
+  display: block;
+  margin: .8rem auto 0 auto;
+  padding: 0;
+  width: 6.9rem;
+  height: .9rem;
+  line-height: .9rem;
+  background: #ff3b31;
+  text-align: center;
+}
+/* line 75, withdrawSuccess.scss */
+.button span {
+  font-size: .34rem;
+  color: #fff;
+}

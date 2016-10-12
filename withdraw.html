@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html id="html">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta name="format-detection" content="telephone=no">
+        <title>提现</title>
+        <link rel="stylesheet" href="css/frozen.css">
+        <link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/withdraw.css"/>
+        <script src="js/jquery-1.11.0.min.js"></script>
+        <script src="js/zepto.min.js"></script>
+        <script src="js/frozen.js"></script>
+    </head>
+    <body ontouchstart>
+        <!--<header>
+        	<div class="left-arrow" onclick="javascript:history.back(-1);">
+				<svg viewBox="29 63 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+				    <!--<desc>Created with Sketch.</desc>
+				    <defs></defs>
+				    <g id="Rectangle-261-+-Rectangle-261-Copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(50.353553, 83.646447) rotate(-135.000000) translate(-50.353553, -83.646447) translate(35.853553, 69.146447)">
+				        <rect id="Rectangle-261" fill="#333333" x="0.3125" y="0.4375" width="28" height="3" rx="1.5"></rect>
+				        <rect id="Rectangle-261-Copy" fill="#333333" transform="translate(26.843750, 14.437500) rotate(-270.000000) translate(-26.843750, -14.437500) " x="12.84375" y="12.9375" width="28" height="3" rx="1.5"></rect>
+				    </g>
+				</svg>
+        	</div>
+        	<span>提现</span>
+        </header>-->
+        <div class="withdraw-method">
+            <div class="fill">
+                <span id="addWithdraw"></span>
+            </div>
+            <div class="change"><span>更换渠道</span></div>
+            <div class="right-arrow">
+                <svg viewBox="691 38 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <g id="我的订单-+-查看全部订单-+-Rectangle-222-Copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(691.000000, 38.000000)">
+                        <path d="M24.7068573,5.2887942 C24.5275895,5.10987853 24.2807302,5 24.0081969,5 L5.99180311,5 C5.45530558,5 5,5.44771525 5,6 C5,6.55613518 5.44404538,7 5.99180311,7 L23,7 L23,24.0081969 C23,24.5446944 23.4477153,25 24,25 C24.5561352,25 25,24.5559546 25,24.0081969 L25,5.99180311 C25,5.72487847 24.8891735,5.47805192 24.7097815,5.29739857 Z" id="Rectangle-222-Copy-2" fill="#999999" transform="translate(15.000000, 15.000000) rotate(-315.000000) translate(-15.000000, -15.000000) "></path>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <section class="withdraw">
+            <span>提现金额（元）</span>
+            <input type="number" placeholder="0.0" id="withdrawMoney" oninput="value=value.replace(/[^\d]+\./g,'');  
+this.value=/^\d+\.?\d{0,2}$/.test(this.value) ?   
+this.value : this.value.split('.')[1].length==2?  
+this.value:this.value=this.value.split('.')[0]+'.'+this.value.split('.')[1].substr(0,2);">
+            <div class="withdraw-enabled"><span id="moneyLeft">可提现金额<i class="theMoney"></i>元</span></div>
+        </section>
+        <section class="confirm"><span>确认提现</span></section>
+        <script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type='text/javascript' src='js/rem.js' charset='utf-8'></script>
+		<script src="js/withdraw.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+	        $('.ui-list li,.ui-tiled li').click(function(){
+	            if($(this).data('href')){
+	                location.href= $(this).data('href');
+	            }
+	        });
+        </script>  
+    </body>
+</html>

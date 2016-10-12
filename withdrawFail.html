@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html id="html">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta name="format-detection" content="telephone=no">
+        <title>订单支付失败</title>
+        <link rel="stylesheet" href="css/frozen.css">
+        <link rel="stylesheet" type="text/css" href="css/withdrawFail.css"/>
+        <script src="js/jquery-1.11.0.min.js"></script>
+        <script src="js/zepto.min.js"></script>
+        <script src="js/frozen.js"></script>
+    </head>
+    <body ontouchstart>
+        <!--<header>
+        	<div class="left-arrow">
+				<svg viewBox="29 63 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+				    <!--<desc>Created with Sketch.</desc>
+				    <defs></defs>
+				    <g id="Rectangle-261-+-Rectangle-261-Copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(50.353553, 83.646447) rotate(-135.000000) translate(-50.353553, -83.646447) translate(35.853553, 69.146447)">
+				        <rect id="Rectangle-261" fill="#333333" x="0.3125" y="0.4375" width="28" height="3" rx="1.5"></rect>
+				        <rect id="Rectangle-261-Copy" fill="#333333" transform="translate(26.843750, 14.437500) rotate(-270.000000) translate(-26.843750, -14.437500) " x="12.84375" y="12.9375" width="28" height="3" rx="1.5"></rect>
+				    </g>
+				</svg>
+        	</div>
+        	<span>全民电商</span>
+        </header>-->
+        <div class="icon">
+            <img src="img/fail.png" alt="">
+        </div>
+        <div class="text">
+            <span>订单支付失败</span>
+        </div>
+        <div class="line"></div>
+        <div class="reason">
+            <span>支付失败的可能的原因:</span>
+            <span>1.您的余额不足</span>
+            <span>2.您的银行卡所属银行不支持大额微信支付</span>
+            <span>3.其他问题</span>
+        </div>
+        <div class="contact">
+            <span class="call">建议您等待我们的运营人员联系您或者您可以马上联系我们的运营人员:</span>
+            <div class="phone">
+                <span>王奭光</span>
+                <span>电话: 4008802220</span>
+            </div>
+            <span class="good">代理商品:</span>
+            <span class="money">代理费用:</span>
+        </div>
+		<script type='text/javascript' src='js/rem.js' charset='utf-8'></script>
+		<script src="js/withdrawFail.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+	        $('.ui-list li,.ui-tiled li').click(function(){
+	            if($(this).data('href')){
+	                location.href= $(this).data('href');
+	            }
+	        });
+        </script>  
+    </body>
+</html>
