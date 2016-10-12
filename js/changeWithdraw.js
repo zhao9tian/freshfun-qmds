@@ -2,7 +2,7 @@ var userId = localStorage.getItem("userId");
 console.log(userId);
 //var userId = 1;
 
-var webUrl = 'https://freshfun365.com/FreshFun';
+var webUrl = 'https://www.freshfun365.com/FreshFun';
 
 $("#add").click(function() {
 	window.location.href = "addWithdraw.html";

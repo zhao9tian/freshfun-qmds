@@ -10,7 +10,7 @@ $('.btn').click(function(){
 var userId = localStorage.getItem("userId");
 // console.log(userId);
 // console.log(typeof userId);
-var webUrl = 'https://freshfun365.com/FreshFun';
+var webUrl = 'https://www.freshfun365.com/FreshFun';
 //var userId = 1 ;
 //获取收益信息
 // var userId = 556677;

@@ -1,4 +1,4 @@
-var webUrl = 'https://freshfun365.com/FreshFun';
+var webUrl = 'https://www.freshfun365.com/FreshFun';
 var imgUrl = "http://pic1.freshfun365.com"
 
 //动态加载商品
@@ -94,78 +94,4 @@ function moreGoods(pagetime){
 	        console.log("未获取");
 	    }
 	});
-}
-
-
-//登录信息
-if(localStorage.getItem("login_count") == null){
-    login();
-    localStorage.setItem("login_count","110");
-}
-function GetQueryStrings(name){
-    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-    var r = window.location.search.substr(1).match(reg);
-    if(r!=null)return  unescape(r[2]); return null;
-}
-function login(){
-    //获取登录信息
-    var ua = navigator.userAgent.toLowerCase();
-    //如果是微信登录
-    if (ua.match(/MicroMessenger/i) == "micromessenger") {
-        var code = getQueryString('code');
-        localStorage.setItem("wxCode",code);
-        console.log(code);
-        // var scode = GetQueryStrings('sign');
-        var scode = '';
-        console.log(scode);
-        $.ajax({
-            type : "get",
-            url : "https://www.freshfun365.com/wz_pay/wx/wx_access.php?method=getWXUserInfo&code="+code,
-            dataType : "JSON",
-            success : function(response){
-                var res = eval(response);
-                console.log(response);
-                var openid = res.openid;
-                localStorage.setItem("openid",openid);
-                console.log(res.headimgurl);
-                localStorage.setItem("headImage",res.headimgurl);
-                console.log(res.nickname);
-                localStorage.setItem("nickname",res.nickname);
-                console.log(res);
-                $.ajax({
-                    type : "post",
-                    contentType: 'application/json;charset=utf-8',
-                    dataType : "JSON",
-                    url : webUrl+"/login/wzLogin.do",
-                    data : JSON.stringify({
-                        province : res.province,
-                        openid : res.openid,
-                        headimgurl : res.headimgurl,
-                        language : res.language,
-                        city : res.city,
-                        country : res.country,
-                        unionid : res.unionid,
-                        nickname : res.nickname,
-                        code : scode
-                    }),
-                    success : function(data){
-                        console.log(data);
-                        localStorage.setItem("userId",data);
-                    },
-                    error : function(){
-                    }
-                })
-            },
-            error : function(response){
-
-            }
-        });
-
-    }
-}
-
-function getQueryString(name) {
-    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-    var r = window.location.search.substr(1).match(reg);
-    if(r!=null)return  unescape(r[2]); return null;
 }

@@ -1,4 +1,4 @@
-var webUrl = 'https://freshfun365.com/FreshFun';
+var webUrl = 'https://www.freshfun365.com/FreshFun';
 var imgUrl = 'http://pic1.freshfun365.com';
 var goodsId = window.location.href.split("?")[1].split("=")[1];
 var userId =localStorage.getItem("userId");
@@ -6,82 +6,10 @@ var openId = localStorage.getItem("openid");
 var code = localStorage.getItem("wxCode");
 var shareImg;
 
-function GetQueryStrings(name) {
-    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-    var r = window.location.search.substr(1).match(reg);
-    if(r!=null)return  unescape(r[2]); return null;
-}
-var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
-if (ua.match(/MicroMessenger/i) == "micromessenger") {
-    var url= window.location.href.split("#")[0];
-    var sign = GetQueryStrings("sign");
 
-    console.log(sign);
-    var code = GetQueryStrings('code');
-    console.log(code);
-    if(sign != null){
-        if (code == null) {
-            response_url();
-        }else{
-            initWeiXin('',code);
-        }
-    }
-}
-function response_url(){
-    var url = encodeURIComponent(window.location.href);
-    localStorage.clear();
-    window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?" +
-        "appid=wxa733bc581ae5b96e" +
-        "&redirect_uri="+url +
-        "&response_type=code" +
-        "&scope=snsapi_userinfo" +
-        "&state=STATE#wechat_redirect" +
-        "&connect_redirect=1";
-}
-
-function initWeiXin(code2,code){
-    $.ajax({
-        url: "https://www.freshfun365.com/wz_pay/wx/wx_access.php?method=getWXUserInfo&code="+code,
-        type: 'get',
-        dataType: 'json',
-        success:function(response){
-            var res = eval(response);
-            console.log(res);
-            localStorage.setItem("openid",res.openid);
-            localStorage.setItem("__headimgurl",res.headimgurl);
-            localStorage.setItem("__nickname",res.nickname);
-            $.ajax({
-                type : "post",
-                contentType: 'application/json;charset=utf-8',
-                dataType : "JSON",
-                url : webUrl+"/login/wzLogin.do",
-                data : JSON.stringify({
-                    province : res.province,
-                    openid : res.openid,
-                    headimgurl : res.headimgurl,
-                    language : res.language,
-                    city : res.city,
-                    country : res.country,
-                    unionid : res.unionid,
-                    nickname : res.nickname,
-                    code : code2
-                }),
-                success : function(data){
-                    console.log(data);
-                    localStorage.setItem("userId",data);
-                },
-                error : function(){
-                }
-            })
-        },
-        error:function(){
-
-        }
-    })
-}
 
 var url= window.location.href.split("#")[0];
-var sign = eCodeBuild();
+var sign = '';
 
 $.ajax({
     url: "https://www.freshfun365.com/wz_pay/wx/share.php?url="+encodeURIComponent(url),
@@ -265,7 +193,7 @@ function pay(){
 	        
 	        $.ajax({
 	            type: 'post',
-	            url: 'https://freshfun365.com/FreshFun/quanMingPay.do',
+	            url: 'https://www.freshfun365.com/FreshFun/quanMingPay.do',
 	            dataType: 'JSON',
 	            contentType: 'application/json;charset=utf-8',
 	            data: JSON.stringify({
@@ -291,13 +219,13 @@ function pay(){
 	function onBridgeReady(payId){
 	    var timestamp=new Date().getTime().toString();
 	    var nonceStr = randomString(32);
-	    var stringA = "appId=wxa733bc581ae5b96e&nonceStr="+nonceStr+"&package=prepay_id="+payId+"&signType=MD5&timeStamp="+timestamp;
-	    var stringSignTemp = stringA+"&key=8c97e4fa0618742bf9fabfb520ce4ac4";
+	    var stringA = "appId=wx9820b9bacf3ba98a&nonceStr="+nonceStr+"&package=prepay_id="+payId+"&signType=MD5&timeStamp="+timestamp;
+	    var stringSignTemp = stringA+"&key=lvfjkbdwyulnbcd441RYUIU563lkhfss";
 	    var sign=hex_md5(stringSignTemp).toUpperCase();
 	    console.log(sign);
 	    WeixinJSBridge.invoke(
 	        'getBrandWCPayRequest', {
-	            "appId" : "wxa733bc581ae5b96e",     //公众号名称，由商户传入
+	            "appId" : "wx9820b9bacf3ba98a",     //公众号名称，由商户传入
 	            "timeStamp": timestamp,         //时间戳，自1970年以来的秒数
 	            "nonceStr" : nonceStr, //随机串
 	            "package" : "prepay_id="+payId,

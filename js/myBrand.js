@@ -1,13 +1,13 @@
 var userId = localStorage.getItem("userId");
 console.log(userId);
 //var userId = 1;
-var webUrl = 'https://freshfun365.com/FreshFun';
+var webUrl = 'https://www.freshfun365.com/FreshFun';
 var webUrl2 = 'http://192.168.3.28:8080';
 var imgUrl = 'http://pic1.freshfun365.com';
 var goodsUrl = 'https://www.freshfun365.com/api/app/FreshFunApp/goodsInfo.html?';
 
 $.ajax({
-	url:webUrl+"/proxy/toBrands.do?merchantProxyId=" + userId,
+	url:webUrl+"/proxy/toBrands.do",
 	type:"get",
 	dataType:"json",
     success:function(data){
