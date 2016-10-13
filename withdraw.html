@@ -46,7 +46,7 @@
         </div>
         <section class="withdraw">
             <span>提现金额（元）</span>
-            <input type="number" placeholder="0.0" id="withdrawMoney" oninput="value=value.replace(/[^\d]+\./g,'');  
+            <input type="number" placeholder="0.00" id="withdrawMoney" oninput="value=value.replace(/[^\d]+\./g,'');  
 this.value=/^\d+\.?\d{0,2}$/.test(this.value) ?   
 this.value : this.value.split('.')[1].length==2?  
 this.value:this.value=this.value.split('.')[0]+'.'+this.value.split('.')[1].substr(0,2);">

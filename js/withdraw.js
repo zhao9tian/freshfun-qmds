@@ -23,6 +23,10 @@ if (localStorage.getItem("infoName") != null){
         var paymentAccount = localStorage.getItem("infoNum");
         var money = $('#withdrawMoney').val();
         var paymentMethod = localStorage.getItem("infoName");
+        if( money == '' || money == '0') {
+            alert("请输入提现金额！");
+            return;
+        };
         $.ajax({
             type:'post',
             url:webUrl+'/withdrawController/applyWithdrawB.do',
@@ -34,12 +38,14 @@ if (localStorage.getItem("infoName") != null){
                 money: money
             }),
             success:function(data){
+                console.log(data);
                 console.log(data.status.code);
                 if(data.status.code == 1001){
                     window.location.href = "withdrawSucceed.html";
                 }
                 else if (data.status.code == 1004) {
                     alert(data.status.msg);
+                    console.log(data.status.msg);
                     window.location.href = "withdraw.html";
                 }
 
@@ -52,33 +58,8 @@ if (localStorage.getItem("infoName") != null){
 }else{
     $("#addWithdraw").html("您还未添加任何提现渠道，快去添加吧！");
     $(".confirm").bind('click', function() {
-        var paymentAccount = localStorage.getItem("infoNum");
-        var money = $('#withdrawMoney').val();
-        var paymentMethod = localStorage.getItem("infoName");
-        $.ajax({
-            type:'post',
-            url:webUrl+'/withdrawController/applyWithdrawB.do',
-            dataType:'JSON',
-            contentType : 'application/json;charset=utf-8',
-            data: JSON.stringify({
-                payway: paymentMethod,
-                account: paymentAccount,
-                money: money
-            }),
-            success:function(data){
-                console.log(data.status.code);
-                if(data.status.code == 1001){
-                    window.location.href = "withdrawSucceed.html";
-                }
-                else if (data.status.code == 1004) {
-                    alert(data.status.msg);
-                    window.location.href = "withdraw.html";
-                }
-            },
-            error:function(){
-                console.log("错误");
-            }
-        });
+        alert("您还未添加任何提现渠道，快去添加吧！");
+        window.location.href = "addWithdraw.html";
     });
 }
 $(".withdraw-method").click(function() {
