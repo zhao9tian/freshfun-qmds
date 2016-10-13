@@ -1,9 +1,7 @@
 var webUrl = 'https://www.freshfun365.com/FreshFun';
 var imgUrl = 'http://pic1.freshfun365.com';
 var goodsId = window.location.href.split("?")[1].split("=")[1];
-var userId =localStorage.getItem("userId");
-var openId = localStorage.getItem("openid");
-var code = localStorage.getItem("wxCode");
+console.log(goodsId);
 var shareImg;
 
 
@@ -66,16 +64,7 @@ $.ajax({
         });
     }
 });
-function eCodeBuild(){
-    var userId = localStorage.getItem("userId");
-    var timestamp = Date.parse(new Date())/1000;
-    var code_str = userId+"|"+timestamp;
-    var code_val = base64encode(utf8to16(code_str));
-    var eCode = encodeURIComponent(code_val);
-    console.log(eCode);
-    //微信分享
-    return eCode;
-}
+
 
 
 
@@ -130,8 +119,6 @@ function loadSwiperImg(){
 function loadText(){
     var data = JSON.parse(localStorage.getItem("goodsInfo"));
     console.log(data);
-    var userId = data.goodsPOJO.merchantProxyId;
-    var goodsId = data.goodsPOJO.id;
     var text = '';
     var shopPrice = '¥' + data.goodsPOJO.goodsMoney;
     var marketPrice = '¥' + data.goodsPOJO.marketMoney;
@@ -198,9 +185,7 @@ function pay(){
 	            contentType: 'application/json;charset=utf-8',
 	            data: JSON.stringify({
 	                "userId": userId,
-	                "goodsId": goodsId,
-	                "openId":openId,
-	                "code": code
+	                "goodsId": goodsId
 	            }),
 	            success: function (data) {
 	                console.log(data);
