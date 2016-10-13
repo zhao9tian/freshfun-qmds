@@ -1,4 +1,4 @@
-var webUrl = 'https://freshfun365.com/FreshFun';
+var webUrl = 'https://www.freshfun365.com/FreshFun';
 var imgUrl = 'http://pic1.freshfun365.com';
 var webUrl2 = 'http://192.168.3.28:8080';
 var userId = localStorage.getItem("userId");

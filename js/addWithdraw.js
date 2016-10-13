@@ -3,7 +3,7 @@ console.log(userId);
 //var userId = 1;
 var withdrawChannel;
 var withdrawAccount = '';
-var webUrl = 'https://freshfun365.com/FreshFun';
+var webUrl = 'https://www.freshfun365.com/FreshFun';
 //选择是否默认样式修改
 $(".info-name").text("微信账号");
 $(".isChecked").click(function(event) {
