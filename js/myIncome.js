@@ -7,16 +7,10 @@ $('.pointBlock').click(function(){
 $('.btn').click(function(){
 	window.location.href = "withdraw.html";
 })
-var userId = localStorage.getItem("userId");
-// console.log(userId);
-// console.log(typeof userId);
 var webUrl = 'https://www.freshfun365.com/FreshFun';
-//var userId = 1 ;
 //获取收益信息
-// var userId = 556677;
 $.ajax({
-    url: webUrl+"/withdrawController/getMyMoneyB.do?userId=" + userId,
-    // url: "http://192.168.3.28:8080/withdrawController/getMyMoneyB.do?userId=" + userId,
+    url: webUrl+"/withdrawController/getMyMoneyB.do",
     type: "get",
     dataType: "json",
     success: function(data) {

@@ -1,10 +1,9 @@
 var webUrl = 'https://www.freshfun365.com/FreshFun';
 var imgUrl = 'http://pic1.freshfun365.com';
 var webUrl2 = 'http://192.168.3.28:8080';
-var userId = localStorage.getItem("userId");
 var withdrawCash = '';
 $.ajax({
-    url: webUrl+"/withdrawController/getMyMoneyB.do?userId=" + userId,
+    url: webUrl+"/withdrawController/getMyMoneyB.do",
     type: "get",
     dataType: "json",
     success: function(data) {
@@ -24,14 +23,12 @@ if (localStorage.getItem("infoName") != null){
         var paymentAccount = localStorage.getItem("infoNum");
         var money = $('#withdrawMoney').val();
         var paymentMethod = localStorage.getItem("infoName");
-        console.log(userId,paymentAccount,money);
         $.ajax({
             type:'post',
             url:webUrl+'/withdrawController/applyWithdrawB.do',
             dataType:'JSON',
             contentType : 'application/json;charset=utf-8',
             data: JSON.stringify({
-                userId: userId,
                 payway: paymentMethod,
                 account: paymentAccount,
                 money: money
@@ -64,7 +61,6 @@ if (localStorage.getItem("infoName") != null){
             dataType:'JSON',
             contentType : 'application/json;charset=utf-8',
             data: JSON.stringify({
-                userId: 1,
                 payway: paymentMethod,
                 account: paymentAccount,
                 money: money

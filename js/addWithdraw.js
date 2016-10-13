@@ -1,6 +1,3 @@
-var userId = localStorage.getItem("userId");
-console.log(userId);
-//var userId = 1;
 var withdrawChannel;
 var withdrawAccount = '';
 var webUrl = 'https://www.freshfun365.com/FreshFun';

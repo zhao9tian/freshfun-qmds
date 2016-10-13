@@ -3,12 +3,8 @@ var imgUrl = 'http://pic1.freshfun365.com';
 var goodsId = window.location.href.split("?")[1].split("=")[1];
 console.log(goodsId);
 var shareImg;
-
-
-
 var url= window.location.href.split("#")[0];
 var sign = '';
-
 $.ajax({
     url: "https://www.freshfun365.com/wz_pay/wx/share.php?url="+encodeURIComponent(url),
     type: 'get',
@@ -184,23 +180,19 @@ function pay(){
 	            dataType: 'JSON',
 	            contentType: 'application/json;charset=utf-8',
 	            data: JSON.stringify({
-	                "userId": userId,
 	                "goodsId": goodsId
 	            }),
 	            success: function (data) {
 	                console.log(data);
 	                console.log(data.data);
 	                onBridgeReady(data.data);
-	                
 	            },
 	            error: function (data) {
-	                console.log(data);
-	                
+	                console.log(data);  
 	            }
 	        });
 	    }
 	});
-	
 	function onBridgeReady(payId){
 	    var timestamp=new Date().getTime().toString();
 	    var nonceStr = randomString(32);
